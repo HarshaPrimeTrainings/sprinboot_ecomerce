@@ -1,0 +1,1 @@
+ALTER TABLE PRODUCT ADD COLUMN (image varchar(100));
