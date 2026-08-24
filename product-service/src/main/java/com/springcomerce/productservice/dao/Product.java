@@ -15,6 +15,7 @@ public class Product {
 	private Integer pid;
 	private String name;
 	private Double price;
+	private String image;
 	
 	public Integer getPid() {
 		return pid;
@@ -34,7 +35,11 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	
-	
-
 }
