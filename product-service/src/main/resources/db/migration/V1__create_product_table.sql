@@ -1,1 +1,1 @@
-create table PRODUCT (pid INT,name VARCHAR(20),price DOUBLE);
+create table PRODUCT (pid INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(20),price DOUBLE);
