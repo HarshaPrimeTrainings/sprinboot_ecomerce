@@ -1,5 +1,7 @@
 package com.springcomerce.orderservice.dao;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +20,7 @@ public class OrderItems {
 	private Double price;
 	private Integer quantity;
 	
+	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "order_oid")
 	private Order order;

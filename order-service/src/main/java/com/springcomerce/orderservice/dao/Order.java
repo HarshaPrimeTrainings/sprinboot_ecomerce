@@ -2,6 +2,8 @@ package com.springcomerce.orderservice.dao;
 
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.CascadeType;
@@ -32,7 +34,8 @@ public class Order {
 	})
 	private Customer customer;
 	
-	@OneToMany(cascade = CascadeType.MERGE,mappedBy = "order")
+	@JsonManagedReference
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "order")
 	private Set<OrderItems> orderItems;
 
 	public Integer getOid() {
@@ -72,6 +75,9 @@ public class Order {
 	}
 
 	public void setOrderItems(Set<OrderItems> orderItems) {
+		if(orderItems!=null) {
+			orderItems.forEach(item->item.setOrder(this));
+		}
 		this.orderItems = orderItems;
 	}
 	
