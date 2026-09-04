@@ -17,7 +17,7 @@ import com.springcomerce.orderservice.service.OrderService;
 
 @RestController
 @RequestMapping("/order")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200",allowedHeaders = {"Authorization","Content-Type"})
 public class OrderController {
 
 	OrderService orderservice;
