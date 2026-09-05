@@ -175,14 +175,15 @@ orders-topic
 
 ## 10. Describe the Topic
 We can check uncommited offset or on unconsumed messages/events by using below command
-![KAFKA_DESCRIBE](https://github.com/HarshaPrimeTrainings/sprinboot_ecomerce/blob/main/kafkadescribe.png)
+
 To view the topic configuration, partitions, leader, and replicas:
 
 ```bat
 kafka-consumer-groups.bat --bootstrap-server localhost:9092 --group notifications-group --describe
 ```
 ---
-
+LAG 1 means one message is not consumed.
+![KAFKA_DESCRIBE](https://github.com/HarshaPrimeTrainings/sprinboot_ecomerce/blob/main/kafkadescribe.png)
 # Kafka Producer
 
 ## 11. Start Kafka Producer
