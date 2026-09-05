@@ -16,7 +16,7 @@ import com.springcomerce.productservice.service.ProductService;
 
 @RestController
 @RequestMapping("/product")
-@CrossOrigin(origins ="http://localhost:4200")
+@CrossOrigin(origins ="http://192.168.176.1:4200")
 public class ProductController {
 	
 	ProductService prdService;

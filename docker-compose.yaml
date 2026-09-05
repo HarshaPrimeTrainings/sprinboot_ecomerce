@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  service1:
+    image: productservice
+    build:
+      context: ./product-service
+      dockerfile: Dockerfile
+    ports:
+      - "8087:8087"
+    depends_on:
+      - service4
+  service2:
+    image: orderservice
+    build:
+      context: ./order-service
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    depends_on:
+      - service4
+  service3:
+    image: notificationservice
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
+    ports:
+      - "8084:8084"
+    depends_on:
+      - service4
+  service4:
+    image: eurekaservice
+    build:
+      context: ./eurekaservice
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+  service5:
+    image: apigateway
+    build:
+      context: ./apigatway
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    depends_on:
+      - service4

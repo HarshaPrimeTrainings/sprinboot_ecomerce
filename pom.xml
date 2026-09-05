@@ -8,5 +8,7 @@
   <module>product-service</module>
   <module>order-service</module>
   <module>notification-service</module>
+  <module>eurekaservice</module>
+  <module>apigatway</module>
   </modules>
 </project>
