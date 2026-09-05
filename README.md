@@ -174,7 +174,7 @@ orders-topic
 ---
 
 ## 10. Describe the Topic
-We can check un commited or on unconsumed offset by using below command
+We can check uncommited offset or on unconsumed messages/events by using below command
 ![KAFKA_DESCRIBE](https://github.com/HarshaPrimeTrainings/sprinboot_ecomerce/blob/main/kafkadescribe.png)
 To view the topic configuration, partitions, leader, and replicas:
 
