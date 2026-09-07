@@ -17,7 +17,7 @@ public class SecurityFilteConfig {
 	SecurityFilterChain initSecurityFilter(HttpSecurity http) {
 		
 		http.authorizeHttpRequests(auth->auth
-				.requestMatchers("/product/all").permitAll()
+				.requestMatchers("/product/all","/service1/product/all/*").permitAll()
 				.anyRequest().authenticated())
 		.cors(Customizer.withDefaults())
 		.oauth2ResourceServer(oauth->oauth.jwt(jwt->jwt.jwtAuthenticationConverter(jwtConvertor)))
